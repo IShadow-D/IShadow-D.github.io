@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Java系列（一） | Hexo</title><meta name="description" content="Java系列（一）"><meta name="keywords" content><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://yoursite.com/2019/09/08/Java系列第一章/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Java系列（一）"><meta name="twitter:description" content="Java系列（一）"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta property="og:type" content="article"><meta property="og:title" content="Java系列（一）"><meta property="og:url" content="http://yoursite.com/2019/09/08/Java系列第一章/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="Java系列（一）"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="next" title href="http://yoursite.com/2019/09/08/第一篇博文——关于纪念我由GitHub+hexo免费搭建的个人网站/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"��","msgToSimplifiedChinese":"��"},
+  highlight_copy: 'true',
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支持'
+  },
+  bookmark: {
+    title: '添加書籤',
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天'
+
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#事实上，只有鬼才知道这个系列会持续多久-｀・ω・´"><span class="toc-number">1.</span> <span class="toc-text">事实上，只有鬼才知道这个系列会持续多久(｀・ω・´)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java的编译环境（win10）"><span class="toc-number">1.0.1.</span> <span class="toc-text">Java的编译环境（win10）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java初编译：小试牛刀"><span class="toc-number">1.0.2.</span> <span class="toc-text">Java初编译：小试牛刀</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧"><span class="toc-number">1.1.</span> <span class="toc-text">而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的DOS命令"><span class="toc-number">1.1.1.</span> <span class="toc-text">常用的DOS命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用Java开发环境介绍"><span class="toc-number">1.1.2.</span> <span class="toc-text">常用Java开发环境介绍</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/post.png)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">Hexo</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><div class="menu_mask"></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item text-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">2</div></a></div></div></div><hr><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Java系列（一）</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 發表於 2019-09-08<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新於 2019-09-08</time></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h2 id="事实上，只有鬼才知道这个系列会持续多久-｀・ω・´"><a href="#事实上，只有鬼才知道这个系列会持续多久-｀・ω・´" class="headerlink" title="事实上，只有鬼才知道这个系列会持续多久(｀・ω・´)"></a>事实上，只有鬼才知道这个系列会持续多久(｀・ω・´)</h2><p>​        没错，我怂了，打不过那两只土拨鼠，回来敲代码泄愤咯。</p>
+<p>​        话不多说，切入正题，我们的Java学习。</p>
+<p>一、什么是Java？</p>
+<p>​        懒得说，自己查，下一问。</p>
+<p>二、Java的发展前景</p>
+<p>​        懒得查，少废话，下一问。</p>
+<p>三、你什么都不知道还推什么博文</p>
+<p>​        我的网站我做主，劳资就是任性&lt;(￣ ﹌ ￣)&gt;  </p>
+<p>// 博主被打中</p>
+<p>emmmmm，少废话，在学习Java之前相信大家也都对Java有了一定的了解，有些同学的理解也许比我更加深♂入，不然不会来学习这门语言，所以接下来我们正式开始今天的内容。</p>
+<h4 id="Java的编译环境（win10）"><a href="#Java的编译环境（win10）" class="headerlink" title="Java的编译环境（win10）"></a>Java的编译环境（win10）</h4><p>一、JDK的下载安装</p>
+<p>​        可以选择甲骨文官方下载<a href="https://www.oracle.com/cn/downloads/或者华为云开源镜像站下载" target="_blank" rel="noopener">https://www.oracle.com/cn/downloads/或者华为云开源镜像站下载</a></p>
+<p><a href="https://mirrors.huaweicloud.com/openjdk/" target="_blank" rel="noopener">https://mirrors.huaweicloud.com/openjdk/</a>  选择下载你需要的版本。</p>
+<p>​        下载完成后傻瓜安装，就很奈斯。</p>
+<p>二、路径配置</p>
+<p>​        最后一步也是<strong><u><em>最重要的一步，路径配置</em></u></strong>/<em>很多人也许不理解为什么要进行路径配置，简单的说，如果把Java当成是你的老婆，那么路径配置的目的，就是让你无论在何时何地，都能随意在哪里召唤出你的老婆</em> /：</p>
+<p>​                1、此电脑（右键）—  属性  — 高级系统变量 — 环境变量 — 系统变量（新建）</p>
+<p>!<img alt data-src="D:%5CBlog%5Cblog%E5%9B%BE%E7%89%87%5CJava%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%5CJAVA_HOME%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F.png" class="lozad"></p>
+<p>如图，变量名设为JAVA_HOME;变量值设为你<u>JDK的安装路径</u>，单击确定</p>
+<p>​                2、系统变量 — path — 编辑 — 新建</p>
+<p><img alt data-src="D:%5CBlog%5Cblog%E5%9B%BE%E7%89%87%5CJava%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%5Cpath%E8%B7%AF%E5%BE%84%E9%85%8D%E7%BD%AE.png" class="lozad"></p>
+<p>上移至第一位，单击确定。如果不出故障的话，JDK路径配置，就这么简单。</p>
+<p>​                3、测试</p>
+<p>​                        召唤出万能的工具狗cmd，让小狗亲自为你嗅探，尝试召唤老婆Java</p>
+<p>​                召唤公式如下：（win+R）— 键入cmd — enter — 键入Java -version</p>
+<p>​        如果你发动了召唤公式，最终输出结果是这样的：</p>
+<p>![](D:\Blog\blog图片\Java系列（一）\Java -version测试成功.png)</p>
+<p>​        那么恭喜你召唤成功，获得老婆一只，并且获得老婆的版本序列号</p>
+<p>​        但是，如果你召唤之后是样子的：</p>
+<p>![](D:\Blog\blog图片\Java系列（一）\Java -version测试失败.png)</p>
+<p>​        那么也要恭喜你，获得一次重头开始路径配置的学习机会，（失败就是成功的开始，耐下性子重新检查你的路径配置）记住不需要重装JDK，重新配置你的路径即可。尝试几次之后，你就会干我一样，爱上这款——呸呸呸，获得一只老婆。</p>
+<h4 id="Java初编译：小试牛刀"><a href="#Java初编译：小试牛刀" class="headerlink" title="Java初编译：小试牛刀"></a>Java初编译：小试牛刀</h4><p>​        如果看到这一步，说明你的老婆已经下载安装并召唤成功了。但是问题在于，我要这个老婆干嘛？如果这个老婆什么都干不了，那我图她啥？图她年纪大？/<em>java目前已经28岁了，这在计算机语言中算是辈分比较大的，虽然比起C来说，她好歹也算是风韵犹存。</em>/</p>
+<p>​        “既然话都说到这个分了，不漏两手你还真当老娘是花瓶？”——来自Java的蔑视。</p>
+<p>话不多说，新建一个文本文档，直接上代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello world!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>记住一定键入记事本时，一定要把<strong>你的输入法全拼改为英文半角</strong>，这很重要。</p>
+<p>​        保存文档（我个人专门为Java设置了一个文件夹，之后所有的Java代码都会保存在这样一个文件夹，这样查找方便，而且一旦出错直接删除代码即可）修改文档名为 HelloWorld.java，这样你的文档文件便转成了java文件//<em>这种办法适用于自动显示拓展名的系统，不知道如何显示拓展名的朋友请自觉度娘。//</em></p>
+<p>​        这样，我们的一个Java文件就做成了，但是问题来了，如何让她所表示的东西显示出来呢，事实上，这依然需要我们的工具狗cmd的帮忙。</p>
+<p>​        打开cmd，cd到你的java文件所在的文件夹，随后键入:<code>javac HelloWorld.java</code>就像这样：</p>
+<p><img alt data-src="D:%5CBlog%5Cblog%E5%9B%BE%E7%89%87%5CJava%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%5Cjavac%E5%88%9B%E5%BB%BAclass%E6%96%87%E4%BB%B6.png" class="lozad"></p>
+<p>​        随后，你就可以在之前存放java文件的文件夹里找到这样的一个class文件：</p>
+<p><img alt data-src="D:%5CBlog%5Cblog%E5%9B%BE%E7%89%87%5CJava%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%5Cclass%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90.png" class="lozad"></p>
+<p>​        到了这里，就只剩下最后一步了，依然用到我们的工具狗cmd，在cmd键入：<code>java HelloWorld</code></p>
+<p>就像这样：</p>
+<p><img alt data-src="D:%5CBlog%5Cblog%E5%9B%BE%E7%89%87%5CJava%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%5CHelloWorld%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C%E6%88%90%E5%8A%9F%EF%BC%81.png" class="lozad"></p>
+<p>恭喜你成功召唤出老婆，并与她一起造了个娃，他的名字就叫做：HelloWorld.java，他的功能，就是让你的电脑输出Hello world！这串字符</p>
+<p>​        相信你在这一路上会遇到各种困难，一般都是你的代码出错导致的，一次性成功的案例很少，所以相信我，如果错了不要气馁，把文件删了重新打一遍，这对你的代码生涯大有裨益</p>
+<p>​        <strong>直到现在为止</strong>，我们都是在表层浅尝即止，我相信这样的实验对大多数人都有帮助，它能够更加深刻地让我们理解java这门语言，而且事实上她很简单，所以无论你有没有基础，一定要尝试写一遍，你会有收获的。</p>
+<h3 id="而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧"><a href="#而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧" class="headerlink" title="而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧"></a>而接下来，我要讲述的，是<strong>正式学习Java语言之前的一些基础技巧</strong></h3><h4 id="常用的DOS命令"><a href="#常用的DOS命令" class="headerlink" title="常用的DOS命令"></a>常用的DOS命令</h4><table>
+<thead>
+<tr>
+<th>1、cd 目录路径</th>
+<th>进入一个目录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2、cd ..</td>
+<td>进入父目录</td>
+</tr>
+<tr>
+<td>3、dir</td>
+<td>查看本目录下的文件和子目录列表</td>
+</tr>
+<tr>
+<td>4、cls</td>
+<td>清除屏幕命令</td>
+</tr>
+<tr>
+<td>5、上下键</td>
+<td>查看敲过的命令</td>
+</tr>
+<tr>
+<td>6、Tab键</td>
+<td>自动补齐命令</td>
+</tr>
+</tbody></table>
+<h4 id="常用Java开发环境介绍"><a href="#常用Java开发环境介绍" class="headerlink" title="常用Java开发环境介绍"></a>常用Java开发环境介绍</h4><p>之前通过记事本进行java文件开发，一些有经验的同学肯定会不屑一顾：这么麻烦就为了得出一串字符，还不如直接打开文档键入输出呢。确实，之前使用记事本作为java文件开发软件时为了让大家更加具体地了解java的工作原理，所以显得繁琐而冗长，正如我们了解到的，老婆要想做好饭，就一定要有好的炊具，emmmmm，这个比喻其实不太恰当，不如这么说，要想跟老婆造娃，总不能在荒郊野岭随便开枪吧（虽然有些人确实有这样的喜好），大部分人，当然是希望有更好的环境，造娃也就更省心。那么有没有这样的一个开发环境呢？当然有！</p>
+<p><strong>Notepad++</strong></p>
+<p><strong>UltraEdit</strong></p>
+<p><strong>EditPlus</strong></p>
+<p>以上三款都可以升级版的记事本，如果说记事本是荒郊野岭，那么这三款可以看成是茅草房，至少可以挡风不漏雨，使用上也方便了不少，但是有些胖友就是喜欢追求极致，就是要总统套房，就是要海滨酒店，就是要落地大窗还是夜光闪闪，有没有这样一个舒适的集成开发环境呢？有！当然有！</p>
+<p><strong>eclipse</strong> <a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a> 入门的胖友可以尝试这一款，不用序列号（免费使用）不需要各种杂七杂八的VPN翻墙下载，绝对适用于入门的胖友，功能对于我们来说也绝对够用了</p>
+<p><strong>IntelliJ IDE</strong> <a href="https://www.jetbrains.com/idea/（外网的东西，正常官网渠道下不了，可自己寻求资源//之后我可能单独创一期关于这一类网站及软件资源的分享,咕咕咕//而且需要序列号。但如果你喜欢网页开发，那我个人是极为推荐这一款的，页面简洁，功能强大，当然正版价格也不贵）" target="_blank" rel="noopener">https://www.jetbrains.com/idea/（外网的东西，正常官网渠道下不了，可自己寻求资源//之后我可能单独创一期关于这一类网站及软件资源的分享,咕咕咕//而且需要序列号。但如果你喜欢网页开发，那我个人是极为推荐这一款的，页面简洁，功能强大，当然正版价格也不贵）</a></p>
+<p><strong>NetBeans</strong> <a href="https://netbeans.org/" target="_blank" rel="noopener">https://netbeans.org/</a> 这一款我并没有接触，但是用过的人都说可以，见仁见智，大家用了才知道吧</p>
+<p>为了更让大家有一个更加清晰的了解，接下来为大家奉上eclipse的下载教程，食堂也差不多开饭了，话不多说，直接切入正题：</p>
+<p>进入官网下载页面<a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/packages/</a></p>
+<p>选择这噶：</p>
+<p>![](D:\Blog\blog图片\Java系列（一）\eclipse IDE下载选择.jpg)</p>
+<p>至于64bit还是32bit，取决于你所使用的JDK版本号</p>
+<p>下载，由于是zip文件，不需要安装，直接解压即可</p>
+<p>解压后打开文件eclipse.exe，叉掉欢迎界面，你没见过的船新的版本就在你眼中，是兄弟就来敲代码！！！</p>
+<p>不敲了，肚子饿了，开饭咯</p>
+<p>​                                                                                                                        ——偶尔发神经的老流氓                                                                                        </p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章鏈接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/09/08/Java系列第一章/">http://yoursite.com/2019/09/08/Java系列第一章/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本博客所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://yoursite.com" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> 打賞<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">΢��</div></li><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">֧����</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2019/09/08/第一篇博文——关于纪念我由GitHub+hexo免费搭建的个人网站/"><img class="next_cover lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span></span></div></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2019 By John Doe</div><div class="framework-info"><span>Power by </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-book" id="readmode" title="閲讀模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字體"></i><i class="fa fa-minus" id="font_minus" title="縮小字體"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="簡繁轉換">��</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜間模式"></i></section><div id="post_bottom"><div id="post_bottom_items"><a id="mobile_to_comment" href="#post-comment"><i class="mobile_scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">目錄</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#事实上，只有鬼才知道这个系列会持续多久-｀・ω・´"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">事实上，只有鬼才知道这个系列会持续多久(｀・ω・´)</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#Java的编译环境（win10）"><span class="toc_mobile_items-number">1.0.1.</span> <span class="toc_mobile_items-text">Java的编译环境（win10）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#Java初编译：小试牛刀"><span class="toc_mobile_items-number">1.0.2.</span> <span class="toc_mobile_items-text">Java初编译：小试牛刀</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">而接下来，我要讲述的，是正式学习Java语言之前的一些基础技巧</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#常用的DOS命令"><span class="toc_mobile_items-number">1.1.1.</span> <span class="toc_mobile_items-text">常用的DOS命令</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#常用Java开发环境介绍"><span class="toc_mobile_items-number">1.1.2.</span> <span class="toc_mobile_items-text">常用Java开发环境介绍</span></a></li></ol></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/nightshift.js"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zindex="-1" data-click="false"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script></body></html>
